@@ -2,10 +2,6 @@ var input_type = document.querySelectorAll("#input-email, #input-emai");
 
 var main = document.querySelector('.main');
 var first_section = document.querySelector('#first-section');
-<<<<<<< HEAD
-=======
-
->>>>>>> 8bb9cfc20f121bba037e24f23ba28c3bf6f004a8
 input_type.forEach(e => {
     e.addEventListener("click", function () {
         main.style.display = "none";
@@ -13,7 +9,6 @@ input_type.forEach(e => {
     });
 });
 /*BUTTON CONTINUE*/
-<<<<<<< HEAD
 var next_button = document.getElementById("first-button");
 var section2 = document.querySelector("#second-section");
 next_button.addEventListener("click", function () {
@@ -22,8 +17,6 @@ next_button.addEventListener("click", function () {
         first_section.style.display = "none"
     }
 });
-=======
-
 var email_check = document.getElementById('email');
 var next_button = document.getElementById("first-button");
 var section2 = document.querySelector("#second-section");
@@ -64,5 +57,4 @@ function validateForm() {
     }
     
     
-}
->>>>>>> 8bb9cfc20f121bba037e24f23ba28c3bf6f004a8
+};

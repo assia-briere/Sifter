@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/auth.css">
-    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"> -->
-     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/stylesheets/auth.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
 
-    <script src="javascript/main.js" defer></script>
+    <script src="/javascript/main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,6 +18,7 @@
     </header>
     <div class="container flex-column" id="container">
         <div class="class-passage-container">
+            <form action="/public/auth/candidat.php" name="signin" class="form" id="form1" method="post" onsubmit="return validateForm()">
             <main class="main">
                 <div class="welocme-page flex-column">
                     <div class="welcome-head flex-column">
@@ -31,8 +31,8 @@
                     </div>
                     <!-- CHOFI HNA BEDLI LIBGHITY TBEDLI   -->
                     <div class="welcome-footer flex-column input-email">
-                        <input class="input-welcome" type="submit" id="input-emai" name="candidat" value="Recherche d' emploi" >
-                        <input class="input-welcome" type="submit" id="input-email" name="recruteur" value="Je Suis un Employeur">
+                        <input class="input-welcome" id="input-emai" name="candidat" value="Recherche d' emploi" >
+                        <input class="input-welcome" id="input-email" name="recruteur" value="Je Suis un Employeur">
                         <p class="welcome-p">Si voulez vous revenir page <a href="/public/" class="acceuille"> Acceuille ?</a></p>
                     </div>
                 </div>
@@ -44,16 +44,16 @@
                     <p class="welcome-p">mbbrcurbvubv achta jjbvjrjbjkvbbv  jbvjbvrjmbqrjbjbjrqvjbq rbvbrjbmbrjbqr jbqjrebjbjbrejjer jbqrjbjrjebv </p>
                 </div>
                 <div class="main-body">
-                    <form action="" class="form" method="post">
+                
                         <div class="inputContainer">
                             <label class="label" for="">Entree votre Email<span style='color:red'>*</span></label>
                             <input class="input" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                             <div id="msg"></div>    
                         </div>
-                    </form>
+                   
                 </div>
                 <div class="welcome-footer flex-column">
-                    <button type="sumbmit" class="button-next" id="first-button" >Continuer <i class="fa-duotone fa-arrow-right"></i></button>
+                    <button class="button-next" id="first-button" >Continuer <i class="fa-duotone fa-arrow-right"></i></button>
                     <p class="welcome-p">Si voulez vous revenir page <a href="/public/auth" class="acceuille"> Acceuille ?</a></p>
 
                 </div>
@@ -65,7 +65,6 @@
                     <p class="welcome-p">mbbrcurbvubv achta jjbvjrjbjkvbbv  jbvjbvrjmbqrjbjbjrqvjbq rbvbrjbmbrjbqr jbqjrebjbjbrejjer jbqrjbjrjebv </p>
                 </div>
                 <div class="main-body">
-                    <form action="" name="signin" class="form" id="form1"  method="post" onsubmit="return validateForm()">
                         <div class="two-input flex-row">   <div class="inputContainer">
                                 <label class="label" for="">Entrez votre Nom <span style='color:red'>*</span></label>
                                 <input class="input-2 input" type="text" name="nom" id="nom" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$" required>
@@ -90,18 +89,17 @@
                         </div>
                     
                 </div>
-                    <div class="welcome-footer flex-column"> 
-                     <input type="submit" class="button-next" name="ct"value="Continuer"> 
+                    <div class="welcome-footer flex-column">
+                     <input type="submit" class="button-next" value="Continuer"> 
                      <!--<i class="fa-duotone fa-arrow-right"></i>-->
                     <p class="welcome-p">Si voulez vous revenir page <a href="/public/auth" class="acceuille"> Acceuille ?</a></p>
                 </div>
-                 </form>
             </section>
-            
+         </form>  
         </div>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
 
 </body>
 </html>
