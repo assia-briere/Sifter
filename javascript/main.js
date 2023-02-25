@@ -29,6 +29,14 @@ next_button.addEventListener("click", function () {
 });
 /*-------Form-------*/ 
 
+
+
+
+
+   
+   
+    
+
 let mssg =  document.querySelector(".mssg-error");
 function validateForm() {
     let password = document.getElementById("password");

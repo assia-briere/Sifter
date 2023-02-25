@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/auth.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/auth.css">
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"> -->
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
 
-    <script src="/javascript/main.js" defer></script>
+    <script src="javascript/main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -65,7 +65,7 @@
                     <p class="welcome-p">mbbrcurbvubv achta jjbvjrjbjkvbbv  jbvjbvrjmbqrjbjbjrqvjbq rbvbrjbmbrjbqr jbqjrebjbjbrejjer jbqrjbjrjebv </p>
                 </div>
                 <div class="main-body">
-                    <form action="candidat.php" name="signin" class="form" id="form1" method="post" onsubmit="return validateForm()">
+                    <form action="" name="signin" class="form" id="form1"  method="post" onsubmit="return validateForm()">
                         <div class="two-input flex-row">   <div class="inputContainer">
                                 <label class="label" for="">Entrez votre Nom <span style='color:red'>*</span></label>
                                 <input class="input-2 input" type="text" name="nom" id="nom" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$" required>
@@ -90,8 +90,8 @@
                         </div>
                     
                 </div>
-                    <div class="welcome-footer flex-column">
-                     <input type="submit" class="button-next" value="Continuer"> 
+                    <div class="welcome-footer flex-column"> 
+                     <input type="submit" class="button-next" name="ct"value="Continuer"> 
                      <!--<i class="fa-duotone fa-arrow-right"></i>-->
                     <p class="welcome-p">Si voulez vous revenir page <a href="/public/auth" class="acceuille"> Acceuille ?</a></p>
                 </div>

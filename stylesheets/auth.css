@@ -202,7 +202,7 @@ a.cv-href:hover {
     background: var(--color2);
     color: var(--color1);
 }
-/*---input-type-file*/
+
 input[type="file" i] {
     background-color: var(--color1);
     appearance: none;
@@ -220,7 +220,6 @@ input[type="file" i] {
 }
 
 
-/*boooootstrap*/
 form.row.g-3.needs-validation {
     display: flex;
     flex-direction: column;

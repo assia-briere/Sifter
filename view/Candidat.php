@@ -4,11 +4,11 @@
    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/auth.css">
+    <link rel="stylesheet" href="../stylesheets/auth.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-    <script src="/javascript/main.js" defer></script>
+    <script src="../javascript/main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
