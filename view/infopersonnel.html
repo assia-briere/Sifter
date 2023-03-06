@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../../javascript/main.js"></script>
+    <title>Les informations personnelles</title>
+   
+</head>
+
+<body>
+  
+    <div class="container">
+                
+                  
+                    
+                  
+           
+        <section class="main ">
+
+        <header>Inscription</header>
+        <form class="row g-3 needs-validation" id="my-form" novalidate>
+            <span class="title">Détails personnels</span>
+
+              <div class="personel">
+                  <div class="row-flex">
+                  <div class="upload_image">
+                    <i class="fa-solid fa-user"></i> 
+                    <div class="round">
+                        <input type="file">
+                        <i class="fa fa-camera" style="color: #fff;"></i>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="col-md">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Ass" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="Br" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>    
+                </div>    
+                  <div class="row"> 
+                    <div class="col-md">
+                        <label for="validationCustom03" class="form-label">Ville</label>
+                        <input type="text" name="ville" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid Ville.
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <label for="validationCustom04" class="form-label">telephone</label>
+                        <input type="tel" id="telephone" class="form-control" id="validationCustom04" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid phone number.
+                        </div>
+                    </div>
+                  </div>  
+                 <div class="row">                     
+                    <div class="col-md">
+                        <label for="validationCustom05" class="form-label">Country</label>
+                        <input type="text" name="country" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                        Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <label for="validationCustom06" class="form-label">Domaine</label>
+                        <input type="text" name="domaine" class="form-control" id="validationCustom06" required>
+                        <div class="invalid-feedback">
+                        Please select a valid state.
+                        </div>
+                    </div>
+                </div>
+                    
+                 </div>
+                    <div class="col-12">
+                        <button class="btn n" id="buttonadd" type="submit"> Submit</button>
+                    </div>
+                  </form>        
+          </section>         
+        
+          <section class="education">
+            <div class="education-header">
+              <div class="left-header">
+                <i class="fa-duotone fa-diploma"></i>
+                <h2>Education</h2>
+             </div>
+            <div class="buttons">
+            <button type="button" class="btn-add" id="add-form"><i class="fa-duotone fa-plus"></i></button> 
+
+            <button type="button" class="btn-add" id="remove-form"  ><i class="fa-duotone fa-xmark"></i></button>
+        </div>
+       </div>
+        <div id="education">
+        <form class="row g-3 needs-validation education-form" id="education-form" >
+            <div class="personel">
+                <div class="col-md">
+                  <label for="validationCustom07" class="form-label">List:</label>
+                  <select class="form-select" id="validationCustom07" required>
+                    <option>Doctorat</option>
+                    <option>Master</option>
+                    <option>License</option>
+                    <option>Bac</option>
+                  </select> 
+                </div>
+                <div class="row"> 
+                    <div class="col-md">
+                        <label for="date-debut" class="form-label">Date Debut:</label>
+                        <input type="date" id="datedebut" class="form-control" name="datedebut" required>
+                        
+                    </div>
+                    <div class="col-md">
+                        <label for="validationCustom05" class="form-label">Date Fin</label>
+                        <input type="date" id="datefin" class="form-control" name="datefin" required>
+                        
+                    </div>
+                  </div>  
+                 <div class="row">                     
+                    <div class="col-md">
+                        <label for="validationCustom04" class="form-label">Fillier:</label>
+                        <input type="text" name="fillier" class="form-control" id="fillier" required>
+
+                    </div>
+                    <div class="col-md">
+                        <label for="faculte" class="form-label">Faculte:</label>
+                        <input type="text" name="faculte" class="form-control" id="faculte" required>
+                        
+                    </div>
+                </div>
+            </div>     
+                    
+        </form>
+        </div>
+      </section>
+      <section class=" experience">
+        <div class="education-header">
+          <div class="left-header">
+            <i class="fa-duotone fa-briefcase"></i>
+            <h2>Experience</h2>
+          </div>
+        <div class="buttons">
+            <button type="button" class="btn-add" id="add-form-experience"><i class="fa-duotone fa-plus"></i></button> 
+
+            <button type="button" class="btn-add" id="remove-form-experience"  ><i class="fa-duotone fa-xmark"></i></button>
+        </div>
+       </div>
+        <div id="experience">
+        <form class="row g-3 needs-validation experience-form" id="experience-form" >
+            <div class="personel">
+                <div class="col-md">
+                  <label for="validationCustom04" class="form-label">List:</label>
+                  <select class="form-select" id="ecperience-list" required>
+                    <option>Stage</option>
+                    <option>Poste de travaile</option>
+                  </select> 
+                </div>
+                <div class="row"> 
+                    <div class="col-md">
+                        <label for="date-debut" class="form-label">Date Debut:</label>
+                        <input type="date" id="datedebut" class="form-control" name="datedebut-experience" required>
+                        
+                    </div>
+                    <div class="col-md">
+                        <label for="validationCustom05" class="form-label">Date Fin:</label>
+                        <input type="date" id="datefin" class="form-control" name="datefin-experience" required>
+                    </div>
+                  </div>  
+                 <div class="row">                     
+                    <div class="col-md">
+                        <label for="validationCustom04" class="form-label">Social:</label>
+                        <input type="text" name="fillier" class="form-control" id="social" required>
+                    </div>
+                    <div class="col-md">
+                        <label for="faculte" class="form-label">Titre:</label>
+                        <input type="text" name="faculte" class="form-control" id="titre" required>   
+                    </div>
+                </div>
+                <div class="col-md">
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+                </div>     
+        </form>
+        </div>
+    </section>
+    <section class="competence">
+      <div class="education-header">
+        <div class="left-header">
+          <i class="fa-duotone fa-briefcase"></i>
+          <h2>Competences:</h2>
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn-add" id="add-comp-form"><i class="fa-duotone fa-plus"></i></button>
+    
+          <button type="button" class="btn-add" id="remove-comp-form"><i class="fa-duotone fa-xmark"></i></button>
+        </div>
+      </div>
+      <div id="competence">
+        <form class="row g-3 competences-form" id="competences-form">
+          <div class="personel">
+            <div class="row">
+              <div class="col-md">
+                <label for="competence-nom" class="form-label">Nom:</label>
+                <input type="text" id="competence-nom" class="form-control" name="competence-nom" required>
+              </div>
+              <div class="col-md">
+                <label for="competence-domain" class="form-label">Domain:</label>
+                <input type="text" id="competence-domain" class="form-control" name="competence-domain" required>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <div class="buttons">
+      <button id="prevBtn" class="btn n" >Previous</button>
+      <button id="nextBtn" class="btn n">Next</button>
+    </div>
+</div>
+<script>
+  const sections = document.querySelectorAll("section");
+    let currentIndex = 0;
+
+    // Hide all sections except for the first one
+    for (let i = 1; i < sections.length; i++) {
+      sections[i].style.display = "none";
+    }
+
+    // Add event listeners to the buttons
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    prevBtn.addEventListener("click", showPrevSection);
+    nextBtn.addEventListener("click", showNextSection);
+
+    // Show the previous section
+    function showPrevSection() {
+      sections[currentIndex].style.display = "none";
+      currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+      sections[currentIndex].style.display = "flex";
+
+      // Disable the "Previous" button if we're at the beginning
+      if (currentIndex === 0) {
+        prevBtn.disabled = true;
+      }
+
+      // Enable the "Next" button if we're not at the end
+      if (currentIndex < sections.length - 1) {
+        nextBtn.disabled = false;
+      }
+    }
+
+    // Show the next section
+    function showNextSection() {
+      sections[currentIndex].style.display = "none";
+      currentIndex = (currentIndex + 1) % sections.length;
+      sections[currentIndex].style.display = "flex";
+
+      // Disable the "Next" button if we're at the end
+      if (currentIndex === sections.length - 1) {
+        nextBtn.disabled = true;
+      }
+
+      // Enable the "Previous" button if we're not at the beginning
+      if (currentIndex > 0) {
+        prevBtn.disabled = false;
+      }
+    }
+
+    // Disable the "Previous" button if we're at the beginning
+    if (currentIndex === 0) {
+      prevBtn.disabled = true;
+    }
+  
+</script>
+
+<script>
+  // COMPETENCE
+  const section_comp = document.querySelector('.competence');
+  const addButton_comp = document.querySelector('#add-comp-form');
+  const removeButton_comp = document.getElementById('remove-comp-form');
+  let formCount_comp = 1;
+
+  addButton_comp.addEventListener('click', addFormCompetence);
+  removeButton_comp.addEventListener('click', removeForm);
+
+  function addFormCompetence(event) {
+    event.preventDefault(); // prevent default form submission behavior
+    let firstForm = section_comp.querySelector('.competences-form');
+    let formClone = firstForm.cloneNode(true);
+    formCount_comp++;
+
+    // set unique ids for each form input element
+    formClone.querySelectorAll('[id]').forEach(function (element) {
+      element.id = element.id + '-' + formCount_comp;
+      element.value = ''; // remove the value of the input field
+    });
+
+    // set unique names for each form input element
+    formClone.querySelectorAll('[name]').forEach(function (element) {
+      element.name = element.name + '-' + formCount_comp;
+      element.value = ''; // remove the value of the input field
+    });
+
+    section_comp.querySelector('#competence').appendChild(formClone);
+  }
+
+
+
+  function removeForm(event) {
+    event.preventDefault(); // prevent default form submission behavior
+    let forms = section_comp.querySelectorAll('.competences-form');
+    if (forms.length > 1) {
+      let lastForm = forms[forms.length - 1];
+      section_comp.querySelector('#competence').removeChild(lastForm);
+      formCount_comp--;
+    }
+  }
+</script>
+
+<script>
+  // EDUCATION
+  const section = document.querySelector('.education');
+  const addButton = document.getElementById('add-form');
+  const removeButton = document.getElementById('remove-form');
+  let formCount = 1;
+
+addButton.addEventListener('click', addFormEducation);
+removeButton.addEventListener('click', removeForm);
+
+function addFormEducation(event) {
+  event.preventDefault(); // prevent default form submission behavior
+  let firstForm = section.querySelector('.education-form');
+  let formClone = firstForm.cloneNode(true);
+  formCount++;
+
+  // set unique ids for each form input element
+  formClone.querySelectorAll('[id]').forEach(function(element) {
+    element.id = element.id + '-' + formCount;
+    element.value = ''; // remove the value of the input field
+  });
+
+  // set unique names for each form input element
+  formClone.querySelectorAll('[name]').forEach(function(element) {
+    element.name = element.name + '-' + formCount;
+    element.value = ''; // remove the value of the input field
+  });
+
+  section.querySelector('#education').appendChild(formClone);
+}
+
+
+
+function removeForm(event) {
+  event.preventDefault(); // prevent default form submission behavior
+  let forms = section.querySelectorAll('.education-form');
+  if (forms.length > 1) {
+    let lastForm = forms[forms.length - 1];
+    section.querySelector('#education').removeChild(lastForm);
+    formCount--;
+  }
+}
+</script>
+<script>
+  // EXPERIENCE
+  const section_Experience = document.querySelector('.experience');
+    const addButton_Experience = document.getElementById('add-form-experience');
+    const removeButton_Experience = document.getElementById('remove-form-experience');
+    let formCount_Experience = 1;
+
+    addButton_Experience.addEventListener('click', addFormExperience);
+    removeButton_Experience.addEventListener('click', removeForm);
+
+    function addFormExperience(event) {
+      event.preventDefault(); // prevent default form submission behavior
+      let firstForm = section_Experience.querySelector('.experience-form');
+      let formClone = firstForm.cloneNode(true);
+      formCount_Experience++;
+
+      // set unique ids for each form input element
+      formClone.querySelectorAll('[id]').forEach(function (element) {
+        element.id = element.id + '-' + formCount;
+        element.value = ''; // remove the value of the input field
+      });
+
+      // set unique names for each form input element
+      formClone.querySelectorAll('[name]').forEach(function (element) {
+        element.name = element.name + '-' + formCount_Experience;
+        element.value = ''; // remove the value of the input field
+      });
+
+      section_Experience.querySelector('#experience').appendChild(formClone);
+    }
+
+    function removeForm(event) {
+      event.preventDefault(); // prevent default form submission behavior
+      let forms = section_Experience.querySelectorAll('.experience-form');
+      if (forms.length > 1) {
+        forms[forms.length - 1].remove();
+        formCount_Experience--;
+      }
+    }
+  
+</script>
+<script>
+    (() => {
+  'use strict'
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+
+</body>
+
+</html>
