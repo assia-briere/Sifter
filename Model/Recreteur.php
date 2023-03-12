@@ -1,52 +1,49 @@
 <?php 
-class Recruteur  {
-    private $conn;
-    private $table_name ="Recruteur";
-    public $nom;
-    public $prenom;
-    public $gmail;
-    public $modePass;
-    public $telephone; 
-    public function __construct($db , $n , $p , $gmail , $md ,$telephone) {
-        $this->conn = $db;
-        $this->nom=$n;
-        $this->prenom=$p;
-        $this->gmail=$gmail;
-        $this->modePass=$md;
-        $this->telephone =$telephone;
-    }
-    
-    
-    public function login($gmail, $modePass) {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE gmail = :gmail AND modePass = :modePass";
-        $stmt = $this->conn->prepare($query);
+require_once dirname(__DIR__) . "/Model/Connexion.php";
+class Recruteur extends Connection {
+
+    public function getUser($gmail, $modePass) {
+        $query = "SELECT * FROM recruteur  WHERE gmail = :gmail AND modPass = :modePass";
+        $stmt = $this->connect()->prepare($query);
         $stmt->bindParam(":gmail", $gmail);
         $stmt->bindParam(":modePass", $modePass);
         $stmt->execute();
         $num = $stmt->rowCount();
-        $stmt->closeCursor();
         
-        if ($num > 0) {
-            echo "Vous êtes connecté.";
-        } else {
-            echo "Veuillez vérifier vos informations de connexion et réessayer.";
+        if($num===0){
+            header("location: ../view/signup.php");
+            exit();
         }
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        $_SESSION["id"] = $user["id"];
+        $_SESSION["gmail"] = $gmail;
+
+        
+        $stmt->closeCursor();
+        return true;
     }
 
-    public function signup() {
-        $query = "INSERT INTO Recruteur (nom, prenom, gmail, modePass, Tele) VALUES (:nom, :prenom, :gmail, :modePass, :telephone)";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":nom", $this->nom);
-        $stmt->bindParam(":prenom", $this->prenom);
-        $stmt->bindParam(":gmail", $this->gmail);
-        $stmt->bindParam(":modePass", $this->modePass);
-        $stmt->bindParam(":telephone", $this->telephone);
-        if ($stmt->execute()) {
-            echo "Votre compte a été créé avec succès.";
-        } else {
-            echo "Une erreur s'est produite lors de la création de votre compte.";
+    public function setUser($name,$prenom,$gmail,$modePass) {
+        $query = "INSERT INTO recruteur (nom, prenom, gmail, modPass) VALUES (:nom, :prenom, :gmail, :modePass)";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindParam(":nom", $name);
+        $stmt->bindParam(":prenom", $prenom);
+        $stmt->bindParam(":gmail", $gmail);
+        $stmt->bindParam(":modePass", $modePass);
+
+
+        try{
+            $stmt->execute();
+               echo "Assia";
+                exit();
+        }catch(Exception $e){
+            echo "error : ".$e->getMessage();
         }
+        
         $stmt->closeCursor();
     }
+    
+    
 }
 ?>

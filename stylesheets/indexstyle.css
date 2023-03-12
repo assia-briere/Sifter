@@ -178,7 +178,7 @@ ul.nav-links {
     justify-content: center;
     position: relative;
     height: 100vh;
-    background-image: url(/img/hero.jpeg);
+    background-image: url(../img/first.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
