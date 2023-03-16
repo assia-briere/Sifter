@@ -1,0 +1,17 @@
+{
+    "name": "assia/application",
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/var-dumper": "^6.2",
+        "zendframework/zendpdf": "^2.0",
+        "setasign/fpdf": "^1.8",
+        "smalot/pdfparser": "^2.3",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"App",
+        "Sectheater\\" : "src"
+        }
+    }
+}

@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+    --color1: rgb(63 130 248);
+    --color4:rgb(235 245 255);
+    --color2: rgba(142, 177, 230, 0.6);
+    --color3: rgb(212, 210, 208);
+}
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+.none{
+    display: none;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+li {
+    list-style: none;
+}
+.container {
+    height: 100vh;
+}
+h1{
+    color: #595959;
+}
+h2{
+    color: #898989;
+    white-space: nowrap;
+    font-size: 22px;
+}
+h3{
+    color: #252424;
+    white-space: nowrap;
+    
+}
+p{
+    color:#ccc;
+    font-weight: 500;
+    line-height: 1;
+}
+/*-----WELCOME-PAGE----*/
+.welocme-page {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgb(92 99 105 / 20%);
+    flex-direction: column;
+}
+.welcome-body {
+    line-height: 1.5;
+}
+.class-passage-container {
+    padding: 50px;
+}
+.welcome-footer {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10%;
+    
+}
+/*-----BUTTON STYLE----*/
+.button-next{
+    box-sizing: border-box;
+    background: none rgb(255, 255, 255);
+    appearance: none;
+    text-decoration: none;
+    border: 1px solid rgb(212, 210, 208);
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5625rem 1rem;
+    width: 100% !important;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: rgb(37, 87, 167);
+    text-align: center;
+}
+.button-next>i{
+    text-align: center;
+    margin-left:1rem ;
+}
+.button-next:hover{
+    background-color: var(--color2);
+    color: #595959;
+}
+.input-welcome{
+    box-sizing: border-box;
+    background: none rgb(255, 255, 255);
+    appearance: none;
+    border: 1px solid var(--color3);
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5625rem 1rem;
+    width: 100% !important;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: rgb(37, 87, 167);
+}
+.input-welcome:hover{
+    background-color: var(--color2) ;
+    border: solid 1px var(--color1);
+    
+}
+.acceuille{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color1);
+}
+.acceuille:hover {
+    border-bottom: 2px solid var(--color1);
+}
+/*---Email---*/
+.main-header {
+    margin: 20px 0px;
+    line-height: 2;
+}
+/*----INPUT_FORM-----*/
+.inputContainer {
+    position: relative;
+    height: 45px;
+    margin: 17px 5px 4px 5px;
+}
+.label {
+
+    padding: 0 4px;
+    background-color: white;
+    color: #595959;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 13px;
+    background: none;
+}
+/*------FORM----*/
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 18px;
+}
+/*----Section----*/
+.section1{
+    display:none;
+    max-width: 482px;
+    width: 100%;
+}
+section {
+    max-width: 482px;
+    width: 100%;
+}
+#second-section{
+    display:none;
+}
+/*---CANDIDATCHOICE---*/
+.choice-can {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+.cv-href {
+    padding: 20px;
+    background: var(--color1);
+    color: var(--color3);
+    border-radius: 10px;
+    font-size: 100%;
+    font-weight: 700;
+    white-space: nowrap;
+    border: dotted 2px;
+}
+a.cv-href:hover {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+input[type="file" i] {
+    background-color: var(--color1);
+    appearance: none;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space: pre;
+    padding: 20px;
+    border: initial;
+    overflow: hidden !important;
+    width: 40%;
+    margin: 2rem 1rem;
+    
+}
+
+
+form.row.g-3.needs-validation {
+    display: flex;
+    flex-direction: column;
+}
+h2.welcome-h2 {
+    white-space: break-spaces;
+}
