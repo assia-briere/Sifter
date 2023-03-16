@@ -16,15 +16,45 @@ include_once dirname(__DIR__) . "/controller/login.php";
     <title>Document</title>
 </head>
 <body>
+
+    <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <header>
         <nav>
         </nav>
     </header>
     <div class="container flex-column" id="container">
         <div class="class-passage-container">
-            <form action="" name="signin" class="form" id="form1" method="post" onsubmit="return validateForm()">
-            <main class="main">
-                <div class="welocme-page flex-column">
+            <form action="" name="signin" class="form welocme-page" id="form1" method="post" onsubmit="return validateForm()">
+            <main >
+                <div class="flex-column">
                     <div class="welcome-head flex-column">
                         <img src="" alt="this welcome image" width="150" height="200">
                         <h1 class="welcome-h1">Bienvenue</h1>

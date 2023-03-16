@@ -5,10 +5,233 @@
 
 }
 :root {
-    --color1: rgb(63 130 248);
     --color4:rgb(235 245 255);
-    --color2: rgba(142, 177, 230, 0.6);
-    --color3: rgb(212, 210, 208);
+    --color1: #E9B7DB;
+    --color2: #8A45C8;
+    --color3: #B35ECE;
+}
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #3E1E68;
+    overflow: hidden;
+}
+
+.background span {
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 25vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #b35ece;
+    top: 11%;
+    left: 71%;
+    animation-duration: 23s;
+    animation-delay: -147s;
+    transform-origin: -17vw -16vh;
+    box-shadow: -50vmin 0 6.733421618034929vmin currentColor;
+}
+
+.background span:nth-child(1) {
+    color: #e9b7db;
+    top: 79%;
+    left: 74%;
+    animation-duration: 151s;
+    animation-delay: -324s;
+    transform-origin: 22vw 3vh;
+    box-shadow: -50vmin 0 7.225822401122845vmin currentColor;
+}
+
+.background span:nth-child(2) {
+    color: #583C87;
+    top: 50%;
+    left: 91%;
+    animation-duration: 13s;
+    animation-delay: -194s;
+    transform-origin: 13vw -11vh;
+    box-shadow: 50vmin 0 6.8517238382874055vmin currentColor;
+}
+
+.background span:nth-child(3) {
+    color: #b35ece;
+    top: 74%;
+    left: 77%;
+    animation-duration: 273s;
+    animation-delay: -292s;
+    transform-origin: -13vw -12vh;
+    box-shadow: -50vmin 0 6.968728043036152vmin currentColor;
+}
+
+.background span:nth-child(4) {
+    color: #b35ece;
+    top: 23%;
+    left: 89%;
+    animation-duration: 167s;
+    animation-delay: -219s;
+    transform-origin: 13vw -4vh;
+    box-shadow: -50vmin 0 7.0186106476087vmin currentColor;
+}
+
+.background span:nth-child(5) {
+    color: #b35ece;
+    top: 77%;
+    left: 30%;
+    animation-duration: 297s;
+    animation-delay: -165s;
+    transform-origin: 17vw -15vh;
+    box-shadow: 50vmin 0 6.972997229629108vmin currentColor;
+}
+
+.background span:nth-child(6) {
+    color: #583C87;
+    top: 67%;
+    left: 47%;
+    animation-duration: 174s;
+    animation-delay: -24s;
+    transform-origin: -5vw -20vh;
+    box-shadow: 50vmin 0 6.306215401893512vmin currentColor;
+}
+
+.background span:nth-child(7) {
+    color: #e9b7db;
+    top: 13%;
+    left: 99%;
+    animation-duration: 56s;
+    animation-delay: -80s;
+    transform-origin: 9vw 22vh;
+    box-shadow: 50vmin 0 6.2674480974816005vmin currentColor;
+}
+
+.background span:nth-child(8) {
+    color: #e9b7db;
+    top: 39%;
+    left: 2%;
+    animation-duration: 110s;
+    animation-delay: -24s;
+    transform-origin: 5vw 16vh;
+    box-shadow: -50vmin 0 6.291558183378042vmin currentColor;
+}
+
+.background span:nth-child(9) {
+    color: #b35ece;
+    top: 46%;
+    left: 74%;
+    animation-duration: 215s;
+    animation-delay: -129s;
+    transform-origin: -3vw 6vh;
+    box-shadow: 50vmin 0 6.313507306651639vmin currentColor;
+}
+
+.background span:nth-child(10) {
+    color: #e9b7db;
+    top: 78%;
+    left: 22%;
+    animation-duration: 405s;
+    animation-delay: -431s;
+    transform-origin: 11vw 5vh;
+    box-shadow: 50vmin 0 7.099199172471997vmin currentColor;
+}
+
+.background span:nth-child(11) {
+    color: #583C87;
+    top: 44%;
+    left: 27%;
+    animation-duration: 78s;
+    animation-delay: -337s;
+    transform-origin: -6vw -23vh;
+    box-shadow: -50vmin 0 7.18751306358173vmin currentColor;
+}
+
+.background span:nth-child(12) {
+    color: #e9b7db;
+    top: 76%;
+    left: 8%;
+    animation-duration: 180s;
+    animation-delay: -398s;
+    transform-origin: 18vw 12vh;
+    box-shadow: -50vmin 0 6.440958896532198vmin currentColor;
+}
+
+.background span:nth-child(13) {
+    color: #583C87;
+    top: 38%;
+    left: 30%;
+    animation-duration: 391s;
+    animation-delay: -94s;
+    transform-origin: -10vw -20vh;
+    box-shadow: -50vmin 0 6.875026821786518vmin currentColor;
+}
+
+.background span:nth-child(14) {
+    color: #e9b7db;
+    top: 13%;
+    left: 48%;
+    animation-duration: 403s;
+    animation-delay: -103s;
+    transform-origin: 3vw 21vh;
+    box-shadow: -50vmin 0 6.90972552333826vmin currentColor;
+}
+
+.background span:nth-child(15) {
+    color: #583C87;
+    top: 14%;
+    left: 37%;
+    animation-duration: 453s;
+    animation-delay: -249s;
+    transform-origin: -20vw 19vh;
+    box-shadow: -50vmin 0 6.628124792829265vmin currentColor;
+}
+
+.background span:nth-child(16) {
+    color: #b35ece;
+    top: 62%;
+    left: 91%;
+    animation-duration: 244s;
+    animation-delay: -155s;
+    transform-origin: -22vw 22vh;
+    box-shadow: -50vmin 0 6.984795732669213vmin currentColor;
+}
+
+.background span:nth-child(17) {
+    color: #e9b7db;
+    top: 14%;
+    left: 60%;
+    animation-duration: 222s;
+    animation-delay: -102s;
+    transform-origin: -11vw -9vh;
+    box-shadow: -50vmin 0 6.3108015065784935vmin currentColor;
+}
+
+.background span:nth-child(18) {
+    color: #e9b7db;
+    top: 37%;
+    left: 4%;
+    animation-duration: 353s;
+    animation-delay: -79s;
+    transform-origin: -11vw 20vh;
+    box-shadow: -50vmin 0 7.175303731980524vmin currentColor;
+}
+section ,.main,.form  {
+    position: relative;
+    background: rgb(251 237 237 / 76%);
+    border-radius: 10px;
 }
 body {
     font-family: sans-serif;
@@ -93,7 +316,7 @@ p{
     font-size: 1rem;
     font-weight: 700;
     border-radius: 0.5rem;
-    color: rgb(37, 87, 167);
+    color: #8A45C8;
     text-align: center;
 }
 .button-next>i{
@@ -102,7 +325,7 @@ p{
 }
 .button-next:hover{
     background-color: var(--color2);
-    color: #595959;
+    color:  #E9B7DB;
 }
 .input-welcome{
     box-sizing: border-box;
@@ -117,11 +340,12 @@ p{
     font-size: 1rem;
     font-weight: 700;
     border-radius: 0.5rem;
-    color: rgb(37, 87, 167);
+    color: var(--color2);
 }
 .input-welcome:hover{
     background-color: var(--color2) ;
     border: solid 1px var(--color1);
+    color: var(--color1);
     
 }
 .acceuille{
@@ -142,11 +366,15 @@ p{
     position: relative;
     height: 45px;
     margin: 17px 5px 4px 5px;
+    width: 100%;
+    margin-top: 24px;
+}
+form.form-client {
+    width: 100%;
 }
 .label {
 
     padding: 0 4px;
-    background-color: white;
     color: #595959;
     font-size: 16px;
     transition: 0.5s;
