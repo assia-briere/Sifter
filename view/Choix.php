@@ -13,6 +13,35 @@
 </head>
 
 <body>
+    <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <header>
         <nav>
 
@@ -32,7 +61,7 @@
                     </div>
                     <!-- CHOFI HNA BEDLI LIBGHITY TBEDLI   -->
                     <div class="welcome-footer flex-column input-email">
-                        <form action="./emailC.php" class="form-client">
+                        <form action="./email.php" class="form-client">
                             <input type="submit" class="input-welcome" id="input-emai" value="Sign Up as a Candidat ">
                         </form>
                         <form action="./email.php" class="form-client">

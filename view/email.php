@@ -18,6 +18,7 @@ include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
 </head>
 
 <body>
+     
     <header>
         <nav>
 
