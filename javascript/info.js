@@ -1,3 +1,35 @@
+// function checkRequired() {
+//   const name = document.getElementById("name");
+//   const message = document.getElementById("message");
+
+//   if (!name.checkValidity()) {
+//     message.textContent = "Please enter a name.";
+//   } else {
+//     message.textContent = "";
+//     // Submit form here
+//   }
+// }
+
+  //for all this shit
+  // const forms = document.querySelectorAll('form');
+  //   // get reference to the button that will trigger the form submissions
+  const submitButton = document.querySelector('#submit-all-forms-button');
+
+  //   // add a click event listener to the submit button
+  //   submitButton.addEventListener('click', (event) => {
+  //     event.preventDefault(); // prevent the default button click behavior
+  //     // loop through each form and submit it
+  //     forms.forEach((form) => {
+  //       console.log("");
+  //       form.querySelectorAll("input").forEach(input=>{
+        
+  //         console.log(input.name +" : "+input.value );
+  //       });
+
+  //     });
+  //   });
+
+
 
   const sections = document.querySelectorAll("section");
     let currentIndex = 0;
@@ -28,6 +60,9 @@
       // Enable the "Next" button if we're not at the end
       if (currentIndex < sections.length - 1) {
         nextBtn.disabled = false;
+        nextBtn.style.display = "block";
+         submitButton.style.display = "none";
+
       }
     }
 
@@ -40,6 +75,8 @@
       // Disable the "Next" button if we're at the end
       if (currentIndex === sections.length - 1) {
         nextBtn.disabled = true;
+        nextBtn.style.display="none";
+        submitButton.style.display="block";
       }
 
       // Enable the "Previous" button if we're not at the beginning
@@ -51,8 +88,95 @@
     // Disable the "Previous" button if we're at the beginning
     if (currentIndex === 0) {
       prevBtn.disabled = true;
+      nextBtn.style.display = "block";
+
     }
   
+   // LOISIR
+
+  const section_loisir = document.querySelector('.loisir');
+    const addButton_loisir = document.querySelector('#add-loisir-form');
+    const removeButton_loisir = document.getElementById('remove-loisir-form');
+    let formCount_loisir = 1;
+
+    addButton_loisir.addEventListener('click', addFormLoisir);
+    removeButton_loisir.addEventListener('click', removeFormLo);
+
+    function addFormLoisir() {
+       // prevent default form submission behavior
+      let firstForm = section_loisir.querySelector('.loisir-form');
+      let formClone = firstForm.cloneNode(true);
+      formCount_loisir++;
+
+      // set unique ids for each form input element
+      formClone.querySelectorAll('[id]').forEach(function (element) {
+        element.id = element.id + '-' + formCount_loisir;
+        element.value = ''; // remove the value of the input field
+      });
+
+      // set unique names for each form input element
+      formClone.querySelectorAll('[name]').forEach(function (element) {
+        element.name = element.name + '-' + formCount_loisir;
+        element.value = ''; // remove the value of the input field
+      });
+
+      section_loisir.querySelector('#loisir').appendChild(formClone);
+    }
+
+
+
+    function removeFormLo(event) {
+      event.preventDefault(); // prevent default form submission behavior
+      let forms = section_loisir.querySelectorAll('.langage-form');
+      if (forms.length > 1) {
+        let lastForm = forms[forms.length - 1];
+        section_loisir.querySelector('#loisir').removeChild(lastForm);
+        formCount_loisir--;
+      }
+    }
+
+  // LES LANGUE
+  const section_Lang = document.querySelector('.langage');
+    const addButton_lang = document.querySelector('#add-langage-form');
+    const removeButton_lang = document.getElementById('remove-langage-form');
+    let formCount_lang = 1;
+
+    addButton_lang.addEventListener('click', addFormLangage);
+    removeButton_lang.addEventListener('click', removeForml);
+
+    function addFormLangage() {
+       // prevent default form submission behavior
+      let firstForm = section_Lang.querySelector('.langage-form');
+      let formClone = firstForm.cloneNode(true);
+      formCount_lang++;
+
+      // set unique ids for each form input element
+      formClone.querySelectorAll('[id]').forEach(function (element) {
+        element.id = element.id + '-' + formCount_lang;
+        element.value = ''; // remove the value of the input field
+      });
+
+      // set unique names for each form input element
+      formClone.querySelectorAll('[name]').forEach(function (element) {
+        element.name = element.name + '-' + formCount_lang;
+        element.value = ''; // remove the value of the input field
+      });
+
+      section_Lang.querySelector('#langage').appendChild(formClone);
+    }
+
+
+
+    function removeForml(event) {
+      event.preventDefault(); // prevent default form submission behavior
+      let forms = section_Lang.querySelectorAll('.langage-form');
+      if (forms.length > 1) {
+        let lastForm = forms[forms.length - 1];
+        section_Lang.querySelector('#langage').removeChild(lastForm);
+        formCount_lang--;
+      }
+    }
+
   // COMPETENCE
   const section_comp = document.querySelector('.competence');
   const addButton_comp = document.querySelector('#add-comp-form');
@@ -60,10 +184,10 @@
   let formCount_comp = 1;
 
   addButton_comp.addEventListener('click', addFormCompetence);
-  removeButton_comp.addEventListener('click', removeFormc);
+  removeButton_comp.addEventListener('click', removeFormC);
 
   function addFormCompetence() {
-    // event.preventDefault(); // prevent default form submission behavior
+     // prevent default form submission behavior
     let firstForm = section_comp.querySelector('.competences-form');
     let formClone = firstForm.cloneNode(true);
     formCount_comp++;
@@ -85,8 +209,8 @@
 
 
 
-  function removeFormc() {
-   // prevent default form submission behavior
+  function removeFormC(event) {
+    event.preventDefault(); // prevent default form submission behavior
     let forms = section_comp.querySelectorAll('.competences-form');
     if (forms.length > 1) {
       let lastForm = forms[forms.length - 1];
@@ -94,6 +218,7 @@
       formCount_comp--;
     }
   }
+
   // EDUCATION
   const section = document.querySelector('.education');
   const addButton = document.getElementById('add-form');
@@ -104,7 +229,7 @@ addButton.addEventListener('click', addFormEducation);
 removeButton.addEventListener('click', removeFormEd);
 
 function addFormEducation() {
-  // event.preventDefault(); // prevent default form submission behavior
+  // prevent default form submission behavior
   let firstForm = section.querySelector('.education-form');
   let formClone = firstForm.cloneNode(true);
   formCount++;
@@ -146,10 +271,11 @@ function removeFormEd(event) {
     removeButton_Experience.addEventListener('click', removeFormEx);
 
     function addFormExperience() {
-      //event.preventDefault(); // prevent default form submission behavior
+       // prevent default form submission behavior
       let firstForm = section_Experience.querySelector('.experience-form');
       let formClone = firstForm.cloneNode(true);
       formCount_Experience++;
+
       // set unique ids for each form input element
       formClone.querySelectorAll('[id]').forEach(function (element) {
         element.id = element.id + '-' + formCount;
@@ -173,3 +299,20 @@ function removeFormEd(event) {
         formCount_Experience--;
       }
     }
+  
+
+    (() => {
+  'use strict'
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
