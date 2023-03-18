@@ -56,7 +56,7 @@ class auth{
             $mail->addAddress($_POST['email'], 'Client');
             $mail->Subject = 'Verification ';
             $mail->Body = '<html><body><h1>Ce message pour verification de email, veuillez entrer ce code de verification:</h1>'.$verification_code.'</body></html>';
-            
+            $mail->isHTML(true);
             // Attempt to send the email
             if ($mail->send()) {
                 header("location: ../view/verff.php");
