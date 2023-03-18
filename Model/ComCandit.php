@@ -18,7 +18,6 @@ class ComCandidat extends Connection {
     $stmt->bindParam(":id", $id);
     $stmt->execute();
     }
-
     function getCom($id){
         $query="SELECT  * FROM  competence WHERE  candidat_id=:id";
         $stmt = $this->connect()->prepare($query);
@@ -27,5 +26,26 @@ class ComCandidat extends Connection {
         $num = $stmt->rowCount();
 
         $comp= $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $comp;
+    }
+
+
+    function ContgetCom($id,$dom){
+        $query="SELECT  * FROM  competence , competences  WHERE  candidat_id=:id and domaine =:dom and comptence.idcom =competences.idcom ";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":dom", $dom);
+       try{
+        $stmt->execute();
+        $num = $stmt->rowCount();
+
+        $comp= $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $num;
+        
+       } catch(Exception $e){
+        echo "error : ".$e->getMessage();
+    }
     }
 }

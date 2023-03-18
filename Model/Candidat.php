@@ -22,6 +22,8 @@ class Candidat extends Connection {
         $_SESSION["id"] = $user["idc"];
         $_SESSION["gmail"] = $gmail;
         $_SESSION["nom"]=$user["nom"];
+        $_SESSION["prenom"]=$user["prenom"];
+        $_SESSION["Tele"]=$user["Tele"];
         
         
         $stmt->closeCursor();
@@ -29,7 +31,10 @@ class Candidat extends Connection {
     }
 
 
+    public function calcul($gmail,$domaine){
+        
 
+    }
     public function setUser($name,$prenom,$gmail,$modePass) {
         $query = "INSERT INTO Candidat (nom, prenom, gmail, modPass) VALUES (:nom, :prenom, :gmail, :modePass)";
         $stmt = $this->connect()->prepare($query);

@@ -73,7 +73,7 @@ $edu->Update();
                   
                     
                   
-    <form action="./userprofile.html" method="post">
+    <form action="./sidbar.php" method="post">
     <section class="main ">
 
 <header>Inscription</header>
@@ -92,7 +92,7 @@ $edu->Update();
         <div class="col-md">
             <div class="col-md">
                 <label for="validationCustom01" class="form-label">Nom :</label>
-                <input type="text" class="form-control" name="nom" id="validationCustom01" value="Ass" required>
+                <input type="text" class="form-control" name="nom" id="validationCustom01" value="<?php echo $_SESSION["nom"] ?>" required>
                 <div class="valid-feedback">
                 Looks good!
                 </div>

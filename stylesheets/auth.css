@@ -228,7 +228,7 @@
     transform-origin: -11vw 20vh;
     box-shadow: -50vmin 0 7.175303731980524vmin currentColor;
 }
-section ,.main,.form  {
+section ,.main  {
     position: relative;
     background: rgb(251 237 237 / 76%);
     border-radius: 10px;

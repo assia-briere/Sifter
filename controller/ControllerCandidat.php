@@ -1,7 +1,7 @@
 <?php
 require_once dirname(__DIR__) . '/Model/Candidat.php'; 
 require_once dirname(__DIR__) .'/vendor/autoload.php';
-
+require_once dirname(__DIR__) . '/Model/Candidat.php';
 use Smalot\PdfParser\Parser;
 class ControllerCandidat extends Candidat{
 
@@ -18,6 +18,10 @@ class ControllerCandidat extends Candidat{
     
    }
 
+
+   public function calcul($gmail,$domaine){
+        
+   }
 
     public function setChoix(){
 

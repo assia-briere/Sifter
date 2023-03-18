@@ -3,7 +3,6 @@ include_once dirname(__DIR__) . "/controller/login.php";
     $Cont = new auth();
     $Cont->checked();
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

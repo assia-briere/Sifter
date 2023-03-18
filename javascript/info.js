@@ -13,7 +13,7 @@
   //for all this shit
   // const forms = document.querySelectorAll('form');
   //   // get reference to the button that will trigger the form submissions
-  const submitButton = document.querySelector('#submit-all-forms-button');
+     const submitButton = document.querySelector('#submit-all-forms-button');
 
   //   // add a click event listener to the submit button
   //   submitButton.addEventListener('click', (event) => {

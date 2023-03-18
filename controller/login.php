@@ -14,6 +14,10 @@ class auth{
                 $Cont = new Candidat();
                 $Rec =new Recruteur();
                 if($Cont->getUser($_POST['email'] , $_POST['pasword'] )){
+                    if(!empty($_SESSION["Tele"])){
+                        header('location: ../view/sidbar.php');
+                        exit();
+                    }
                     header('location: ../view/Candidat.php');
                     exit();
                 }
@@ -47,8 +51,8 @@ class auth{
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'briereassil@gmail.com'; // replace with your Gmail email address
-            $mail->Password = 'fdyjgpwnrcjvtuym'; // replace with your Gmail password
+            $mail->Username = 'assbrtst@gmail.com'; // replace with your Gmail email address
+            $mail->Password = 'ddnymzrxxlgnzcjn'; // replace with your Gmail password
             $mail->SMTPSecure = 'tls'; // set TLS encryption
             $mail->Port = 587 ;
             // Set the email details
