@@ -6,57 +6,17 @@ use Smalot\PdfParser\Parser;
 class ControllerCandidat extends Candidat{
 
 
-    public function signUp() {
-        if (isset($_POST['EE'])) {
-            $_SESSION["gmail"]=$_POST['email'];
-            $verification_code = rand(100000, 999999);
-            $_SESSION["code"]= $verification_code;
-            $mail = new PHPMailer\PHPMailer\PHPMailer();
-            
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'briereassil@gmail.com'; // replace with your Gmail email address
-            $mail->Password = 'gvmobsrczpkxxibh'; // replace with your Gmail password
-            $mail->SMTPSecure = 'tls'; // set TLS encryption
-            $mail->Port = 587 ;
-            // Set the email details
-            $mail->setFrom('assbrtst@gmail.com', 'Sifter'); // replace with your name and email address
-            $mail->addAddress($_POST['email'], 'Client');
-            $mail->Subject = 'Verification ';
-            $mail->Body = 'Ce message pour verfication de email  , voullez entre ce code de verfication :'.$verification_code ;
-            
-            // Attempt to send the email
-            if ($mail->send()) {
-                header("location: ../view/verff.php");
-            } else {
-                echo 'Error: ' . $mail->ErrorInfo;
-            }
-            
-        }
-        if(isset($_POST['vr'])){
-            if($_SESSION["code"]==$_POST["code"]){
-                header("location: ../view/signup.php");
-            }
-        }
-        if(isset($_POST['cs'])){
-            if ( isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['pasword']) and isset($_POST['confirm-password'])) {
-                $this->setUser($_POST['nom'],$_POST['prenom'],$_SESSION["gmail"],$_POST['pasword']);
-            }
-            else{
-                echo "error";
-            }
-        }
 
-}
-
-    public function logIn(){
-        if (isset($_POST['cl'])) {
-                if (  isset($_POST['email'])and isset($_POST['pasword'])) {
-                    $this->getUser($_POST['email'] , $_POST['pasword'] );
-                }
+   function Update(){
+      if(isset($_POST["sumbit"])){
+        if(isset($_POST["nom"]) and !empty($_POST["nom"]) and isset($_POST["prenom"]) and !empty($_POST["prenom"])
+      and   isset($_POST["ville"]) and !empty($_POST["ville"]) and isset($_POST["telephone"]) and !empty($_POST["telephone"])
+        and isset($_POST["domaine"]) and !empty($_POST["domaine"])){
+            $this->updateCandidat($_POST["nom"],$_POST["prenom"],$_POST["ville"],$_POST["telephone"],$_POST["domaine"],$_SESSION["id"]);
+      }
     }
-    }
+    
+   }
 
 
     public function setChoix(){
