@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
-$Cont = new ControllerCandidat();
-    $Cont->signUp();
+include_once dirname(__DIR__) . "/controller/login.php";
+$Cont = new auth();
+    $Cont->singUp();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,9 @@ $Cont = new ControllerCandidat();
 </head>
 
 <body>
-     <div class="background">
+
+
+<div class="background">
     <span></span>
     <span></span>
     <span></span>

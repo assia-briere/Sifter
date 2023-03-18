@@ -21,6 +21,7 @@ class Candidat extends Connection {
         
         $_SESSION["id"] = $user["idc"];
         $_SESSION["gmail"] = $gmail;
+        $_SESSION["nom"]=$user["nom"];
         
         
         $stmt->closeCursor();

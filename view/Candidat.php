@@ -17,7 +17,8 @@ include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
     <title>Document</title>
 </head>
 <body>
-    <div class="background">
+    
+<div class="background">
     <span></span>
     <span></span>
     <span></span>
@@ -56,7 +57,7 @@ include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
                 <div class="main-header">
                 <div class="welcome-head flex-column">
                         <h1 class="welcome-h1">Bienvenue <?php 
-                        echo "ASHF" ?></h1>
+                        echo $_SESSION["nom"] ?></h1>
                         <p>Choisi la bon choix</p>
                     </div>
                 </div>

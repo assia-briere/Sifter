@@ -1,4 +1,8 @@
-
+<?php
+include_once dirname(__DIR__) . "/controller/login.php";
+    $Cont = new auth();
+    $Cont->singUp();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,10 @@
 </head>
 
 <body>
-    <div class="background">
+
+
+
+<div class="background">
     <span></span>
     <span></span>
     <span></span>
@@ -61,11 +68,9 @@
                     </div>
                     <!-- CHOFI HNA BEDLI LIBGHITY TBEDLI   -->
                     <div class="welcome-footer flex-column input-email">
-                        <form action="./email.php" class="form-client">
-                            <input type="submit" class="input-welcome" id="input-emai" value="Sign Up as a Candidat ">
-                        </form>
-                        <form action="./email.php" class="form-client">
-                            <input type="submit" class="input-welcome" id="input-email" value="Sign Up as a Recruteur ">
+                        <form action="" class="form-client" method="post">
+                            <input type="submit" class="input-welcome" id="input-emai" name="Can" value="Sign Up as a Candidat ">
+                            <input type="submit" class="input-welcome" id="input-email" name="Rec" value="Sign Up as a Recruteur ">
                         </form>
                         <p class="welcome-p">Si voulez vous revenir page <a href="/public/" class="acceuille"> Acceuille ?</a></p>
                     </div>

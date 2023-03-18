@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__DIR__) . "/controller/login.php";
-    $Cont = new login();
+    $Cont = new auth();
     $Cont->checked();
 ?>
 <!DOCTYPE html>
