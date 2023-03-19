@@ -17,10 +17,13 @@ class Connection{
         try {
             $connection = "mysql:host={$config['host']};dbname={$config['db']};charset=utf8mb4";
             $pdo = new PDO($connection, $config['user'], $config['password'], $config['options']);
+            echo "gg";
             return $pdo;
         } catch (PDOException $e) {
             die("Error connection: " . $e->getMessage());
         }
     }
 }
+
+$connection = new connect();
 ?>
