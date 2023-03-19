@@ -25,5 +25,5 @@ class Connection{
     }
 }
 
-$connection = new connect();
+
 ?>
