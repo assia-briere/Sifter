@@ -3,7 +3,6 @@
 require_once dirname(__DIR__) . "/Model/Connexion.php";
 
 class Education extends Connection {
-
     
     public function getEducation($id){
         $query = "SELECT * FROM Education  where candidat_id = :id ";
