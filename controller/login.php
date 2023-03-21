@@ -14,12 +14,15 @@ class auth{
                 $Cont = new Candidat();
                 $Rec =new Recruteur();
                 if($Cont->getUser($_POST['email'] , $_POST['pasword'] )){
-                    if(!empty($_SESSION["Tele"])){
+                    if(!empty($_SESSION["score"])){
                         header('location: ../view/dashboard.php');
                         exit();
-                    }
+                    }else{
                     header('location: ../view/Candidat.php');
                     exit();
+
+                    }
+                    // echo $_SESSION["score"];
                 }
                 else if($Rec->getUser($_POST['email'],$_POST['pasword'] )){
                     header('location: ../view/param.php');

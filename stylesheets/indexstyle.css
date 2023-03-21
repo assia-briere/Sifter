@@ -4,6 +4,9 @@
     box-sizing: border-box;
 
 }
+/* B35ECE
+8A45C8
+E9B7DB */
 body {
     font-family: sans-serif;
 }
@@ -46,10 +49,10 @@ li {
 }
 .a-logo {
     white-space: nowrap;
-    color: #3fa9f5;
+    color: #E9B7DB;
 }
 .span-log {
-    color: #1300ff;
+    color: #8A45C8;
 }
 .img-logo {
     /* background-size: cover; */
@@ -80,7 +83,7 @@ li {
 .get-start{
     max-width: 150px;
     padding: 10px !important;
-    background-color: #0065ff;
+    background-color: #B35ECE;
     transition: 0.3s;
     border-radius: 100px;
     letter-spacing: .5px;
@@ -95,14 +98,14 @@ li {
     color: #ccc;
 }
 .login a:hover{
-    background-color: #3fa9f5;
+    background-color: #E9B7DB;
 }
 .log > a:hover{
-    background-color: #3fa9f5;
+    background-color: #E9B7DB;
     transition: 0.3s ease;
 }   
 .menu li:hover {
-    border-bottom: solid 3px #0065ff;
+    border-bottom: solid 3px #B35ECE;
     transition: 0.3s ease;
     color: black !important;
 }
@@ -159,7 +162,7 @@ ul.nav-links {
 
 .hamburger {
     display: none;
-    color: #0065ff;
+    color: #B35ECE;
     font-size: 4em;
     user-select: none;
 }
@@ -196,7 +199,7 @@ ul.nav-links {
 .hero-subtitle-box{
     width: 12px;
     height: 12px;
-    background-color: #3fa9f5;
+    background-color: #E9B7DB;
 }
 .hero-subtit {
    
@@ -218,7 +221,7 @@ ul.nav-links {
     padding: 10px 42px;
 }
 .highlight{
-    color: #3fa9f5;
+    color: #E9B7DB;
 }
 .hero-sub-p2{
     padding: 10px 42px;
@@ -547,5 +550,4 @@ ul.nav-links {
         display: block;
         margin-right: 0;
         font-weight: 600
-    }
-}
+    }}

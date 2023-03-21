@@ -64,17 +64,15 @@ include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
                 <div class="main-body">
                 <div class="choice-can ">
                     <div class="flex items-center justify-center ">
-                        <form action="" method="post" enctype="multipart/form-data">
-                        <label for="dropzone-file" class="flex flex-col items-center justify-center border-2 border-blue-30 border-dashed rounded-lg cursor-pointer bg-blue-500 dark:hover:bg-gray-30 dark:bg-blue-700 hover:bg-gray-400 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="dropzone-file" class="flex flex-col items-center justify-center border-2 rounded-lg cursor-pointer ">
                             <div class="flex flex-col items-center justify-center ">
-                                <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                                <p class="mb-2 text-sm dark:text-gray-400"><span class="font-semibold">Click to upload</span></p>
-                                <p class="text-xs text-bleu-500 dark:text-gray-400">PDF</p>
+                                <p class="cv-href" id="result"><span class="font-semibold">Click to upload</span></p>
                             </div>
                             <input id="dropzone-file"  type="file" name="cv"  class="hidden" />
-                            <input type="submit" class="button-next" name="ch"value="Continuer" onclick = "tst()"> 
+                            <input type="submit" class="hidden" name="ch" value="Continuer" > 
                         </label>
-                        </form>
+                    </form>
                     </div> 
                     <div class="create-cv">
                         <a href="./info.php" class="cv-href">Creer un CV </a>
@@ -87,4 +85,10 @@ include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
             </section>
     </div>
 </body>
+<script>
+document.getElementById("dropzone-file").onchange = function() {
+    document.getElementById("result").innerHTML = "<span class='font-semibold'>Uploaded</span>";
+    document.getElementsByName("ch")[0].click();
+};
+</script>
 </html>

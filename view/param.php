@@ -1,9 +1,17 @@
 <?php
-include_once dirname(__DIR__) . "/controller/ControllerRecruter.php";
-    $Cont = new ControlleR();
-    $Cont->setParam();
-?>
+include_once dirname(__DIR__) . "/controller/ComController.php";
+include_once dirname(__DIR__) . "/controller/paramController.php";
+include_once dirname(__DIR__) . "/Model/competences.php";
+include_once dirname(__DIR__) . "/Model/Langue.php";
+    $Cont = new Competences();
+    $param= new paramController();
+    $noms =$Cont->getCompetences();
+    $doms=$Cont->getDomaine();
+    $lan = new langue();
+    $langs= $lan->getLangs();
+    $param->Parametr();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,52 +58,65 @@ include_once dirname(__DIR__) . "/controller/ControllerRecruter.php";
             <div class="modal-content">
                 <form action="" method="POST" id="form-product" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h5 class="modal-title">search for trainee</h5>
+                        <h5 class="modal-title">Entrer les parametre de recherche </h5>
                     </div>
                     <div class="modal-body">
                         <div class="mb-0">
                             <label class="col-form-label" for="domaine">Domaine:</label>
-                            <select class="form-select"  required aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select class="form-select"  required aria-label="Default select example" name="domaine">
+                                <option selected></option>
+                                <?php
+                                $op='';
+                                foreach($doms as $dom){
+                                    echo '<option value="'.$dom["domaine"].'">'.$dom["domaine"].'</option>';
+                                } 
+                                // echo $op
+                                ?> 
                             </select>
                         </div>
                         <div class="mb-0">
                             <label class="col-form-label" for="competence">Competence:</label>
-                            <select class="form-select"  required aria-label="Default select example">
+                            <select class="form-select"  required aria-label="Default select example" name ="competence">
                                 <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <?php 
+                                $op='';
+                                foreach($noms as $nom){
+                                    echo '<option value="'.$nom["nom"].'">'.$nom["nom"].'</option>';
+                                } 
+                                // echo $op
+                                ?> 
                             </select>
                         </div>
                         <div class="mb-0">
-                            <label class="col-form-label" for="niveaux-etude">Niveau d'Etude:</label>
-                            <select class="form-select"  required aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <label class="col-form-label" for="auxnive-etude">Niveau d'Etude:</label>
+                            <select class="form-select"  required aria-label="Default select example" name="niveaux-etude">
+                                <option selected></option>
+                                <option value="Doctorat">Doctorat</option>
+                                <option value="Master">Master</option>
+                                <option value="licence">Licence</option>
+                                <option value="bac+2">Technicien</option>
+                                <option value="bac">Baccalauréat</option>
                             </select>
                         </div>
                         <div class="mb-0">
                             <label class="col-form-label" for="experience">Experience:</label>
-                            <select class="form-select"  required aria-label="Default select example">
+                            <select class="form-select"  required aria-label="Default select example" name="experience">
                                 <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Moins de 6 mois </option>
+                                <option value="2">Entre 6 et 12 mois </option>
+                                <option value="3">plus d'un an </option>
+                                <option value="3">plus de 2 ans </option>
                             </select>
                         </div>
                         <div class="mb-0">
                             <label class="col-form-label" for="lang">Langue:</label>
-                            <select class="form-select"  required aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select class="form-select"  required aria-label="Default select example" name ="lang">
+                            <?php 
+                                $op='';
+                                foreach($langs as $lang){
+                                    echo '<option value="'.$lang["nom"].'">'.$lang["nom"].'</option>';
+                                }
+                                ?> 
                             </select>
                         </div>
                     </div>

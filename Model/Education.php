@@ -3,6 +3,7 @@
 require_once dirname(__DIR__) . "/Model/Connexion.php";
 
 class Education extends Connection {
+
     
     public function getEducation($id){
         $query = "SELECT * FROM Education  where candidat_id = :id ";
@@ -11,11 +12,10 @@ class Education extends Connection {
         $stmt->execute();
         $num = $stmt->rowCount();
 
-        $edu= $stmt->fetch(PDO::FETCH_ASSOC);
+        $edu= $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $edu;
     }
-    
     public function setEducation ($edu,$dateD,$dateF,$fillier,$faculte,$id){
         $query = "INSERT INTO Education (nom,dateDebut,dateFin,fillier,faculte,candidat_id) 
         VALUES (:nom, :datD,:datF,:fil,:fac,:id)";

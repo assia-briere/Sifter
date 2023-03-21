@@ -59,8 +59,7 @@ $Cont = new auth();
             <div class="main-header">
                 <h2 class="welcome-h2">Prêt à passer à l'étape suivante ?</h2>
                 <h4 class="welcome-p">Créez un compte ou connectez-vous.</h4>
-                <p class="welcome-p">mbbrcurbvubv achta jjbvjrjbjkvbbv jbvjbvrjmbqrjbjbjrqvjbq rbvbrjbmbrjbqr jbqjrebjbjbrejjer
-                    jbqrjbjrjebv </p>
+                <p class="welcome-p">Sifter est un site internet qui permet aux employeurs et aux chercheurs d’emploi de se connecter. Les employeurs peuvent déposer des offres d'emploi et rechercher des candidats, tandis que les candidats peuvent rechercher des offres d'emploi et créer des profils professionnels.</p>
             </div>
             <form action="" name="signin" class="form" id="form1" method="post" onsubmit="return validateForm()">
             <div class="main-body">

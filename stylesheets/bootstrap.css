@@ -313,7 +313,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(31, 135, 219);
+    background: #f0edfa;
 }
 /* .form-login{
 } */
@@ -327,7 +327,7 @@ body {
 
 .left-header>i {
     font-size: 23px;
-    color: #4070f4;
+    color: #B35ECE;
 }
 .education-header {
     display: flex;
@@ -369,7 +369,7 @@ div#education, div#experience, div#competence {
     border-radius: 6px;
     padding: 30px;
     margin: 0px 15px;
-    background-color: #fff;
+    background-color: #f0edfa;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .container.row-flex{
@@ -407,14 +407,13 @@ div#education, div#experience, div#competence {
 .container form {
     position: relative;
     margin-top: 16px;
-    background-color: #fff;
 }
 
-.container form .personel {
+.container  .personel {
     margin-top: 30px;
 }
 
-.container form .title {
+.container  .title {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
@@ -423,7 +422,7 @@ div#education, div#experience, div#competence {
     color: #333;
 }
 
-.container form .fields {
+.container  .fields {
     /*put item in the center */
     display: flex;
     align-items: center;
@@ -522,20 +521,16 @@ input[type='file']::-webkit-file-upload-button {
     height: 45px;
     max-width: 200px;
     width: 100%;
-    background-color: #4070f4;
+    background-color: #f0edfa;
     border: none;
     outline: none;
-    color: #fff;
     border-radius: 5px;
     margin: 25px 0px;
-    background-color: #4070f4;
     transition: all 0.3s linear;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #265df2;
-}
+
 
 .wrap {
     display: flex;

@@ -59,7 +59,7 @@ include_once dirname(__DIR__) . "/controller/login.php";
             <main class="main">
                 <div class="welocme-page flex-column">
                     <div class="welcome-head flex-column">
-                        <img src="" alt="this welcome image" width="150" height="200">
+                        <img src="../img/logo2.png" alt="this welcome image" width="150" height="200">
                         <h1 class="welcome-h1">Bienvenue</h1>
                     </div>
                     <div class="welcome-body">
@@ -78,4 +78,4 @@ include_once dirname(__DIR__) . "/controller/login.php";
             </main>
         </div>
         </div>
-    </body>        
+    </body>

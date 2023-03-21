@@ -7,12 +7,22 @@ class Competences extends Connection {
 
 
     public function getCompetences(){
-        $query = "SELECT * FROM competences ";
+        $query = "SELECT nom FROM competences ";
         $stmt = $this->connect()->prepare($query);
         $stmt->execute();
         $num = $stmt->rowCount();
 
-        $comp= $stmt->fetch(PDO::FETCH_ASSOC);
+        $comp= $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $comp;
+    }
+    public function getDomaine(){
+        $query = "SELECT DISTINCT (domaine) FROM competences ";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->execute();
+        $num = $stmt->rowCount();
+
+        $comp= $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $comp;
     }

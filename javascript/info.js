@@ -115,10 +115,10 @@
       });
 
       // set unique names for each form input element
-      formClone.querySelectorAll('[name]').forEach(function (element) {
-        element.name = element.name + '-' + formCount_loisir;
-        element.value = ''; // remove the value of the input field
-      });
+      // formClone.querySelectorAll('[name]').forEach(function (element) {
+      //   element.name = element.name + '-' + formCount_loisir;
+      //   element.value = ''; // remove the value of the input field
+      // });
 
       section_loisir.querySelector('#loisir').appendChild(formClone);
     }
@@ -157,10 +157,10 @@
       });
 
       // set unique names for each form input element
-      formClone.querySelectorAll('[name]').forEach(function (element) {
-        element.name = element.name + '-' + formCount_lang;
-        element.value = ''; // remove the value of the input field
-      });
+      // formClone.querySelectorAll('[name]').forEach(function (element) {
+      //   element.name = element.name + '-' + formCount_lang;
+      //   element.value = ''; // remove the value of the input field
+      // });
 
       section_Lang.querySelector('#langage').appendChild(formClone);
     }
@@ -199,10 +199,10 @@
     });
 
     // set unique names for each form input element
-    formClone.querySelectorAll('[name]').forEach(function (element) {
-      element.name = element.name + '-' + formCount_comp;
-      element.value = ''; // remove the value of the input field
-    });
+    // formClone.querySelectorAll('[name]').forEach(function (element) {
+    //   element.name = element.name + '-' + formCount_comp;
+    //   element.value = ''; // remove the value of the input field
+    // });
 
     section_comp.querySelector('#competence').appendChild(formClone);
   }
@@ -241,10 +241,10 @@ function addFormEducation() {
   });
 
   // set unique names for each form input element
-  formClone.querySelectorAll('[name]').forEach(function(element) {
-    element.name = element.name + '-' + formCount;
-    element.value = ''; // remove the value of the input field
-  });
+  // formClone.querySelectorAll('[name]').forEach(function(element) {
+  //   element.name = element.name + '-' + formCount;
+  //   element.value = ''; // remove the value of the input field
+  // });
 
   section.querySelector('#education').appendChild(formClone);
 }
@@ -283,10 +283,10 @@ function removeFormEd(event) {
       });
 
       // set unique names for each form input element
-      formClone.querySelectorAll('[name]').forEach(function (element) {
-        element.name = element.name + '-' + formCount_Experience;
-        element.value = ''; // remove the value of the input field
-      });
+      // formClone.querySelectorAll('[name]').forEach(function (element) {
+      //   element.name = element.name + '-' + formCount_Experience;
+      //   element.value = ''; // remove the value of the input field
+      // });
 
       section_Experience.querySelector('#experience').appendChild(formClone);
     }

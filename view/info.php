@@ -16,6 +16,7 @@ $com->Update();
 $lang->Update();
 $exp->Update();
 $edu->Update();
+$Cont->score();
 ?>
 
 
@@ -36,7 +37,8 @@ $edu->Update();
    
 </head>
 
-<body> <div class="background">
+<body> 
+ <!--  <div class="background">
     <span></span>
     <span></span>
     <span></span>
@@ -65,7 +67,7 @@ $edu->Update();
     <span></span>
     <span></span>
   </div>
-
+ -->
 
   
     <div class="container">
@@ -73,7 +75,7 @@ $edu->Update();
                   
                     
                   
-    <form action="./sidbar.php" method="post">
+    <form action="" method="post">
     <section class="main ">
 
 <header>Inscription</header>
@@ -163,34 +165,35 @@ $edu->Update();
     <div class="personel">
         <div class="col-md">
           <label for="validationCustom07" class="form-label">List:</label>
-          <select class="form-select" id="validationCustom07" name="validationCustom07" required>
+          <select class="form-select" id="validationCustom07" name="validationCustom07[]" required>
             <option>Doctorat</option>
             <option>Master</option>
-            <option>License</option>
-            <option>Bac</option>
+            <option>Licence</option>
+            <option>technicien</option>
+            <option>Baccalauréat</option>
           </select> 
         </div>
         <div class="row"> 
             <div class="col-md">
                 <label for="date-debut" class="form-label">Date Debut:</label>
-                <input type="date" id="datedebut" class="form-control" name="datedebut" required>
+                <input type="date" id="datedebut" class="form-control" name="datedebut[]" required>
                 
             </div>
             <div class="col-md">
                 <label for="validationCustom05" class="form-label">Date Fin</label>
-                <input type="date" id="datefin" class="form-control" name="datefin" required>
+                <input type="date" id="datefin" class="form-control" name="datefin[]" required>
                 
             </div>
           </div>  
          <div class="row">                     
             <div class="col-md">
                 <label for="validationCustom04" class="form-label">Fillier:</label>
-                <input type="text" name="fillier" class="form-control" id="fillier" required>
+                <input type="text" name="fillier[]" class="form-control" id="fillier" required>
 
             </div>
             <div class="col-md">
                 <label for="faculte" class="form-label">Faculte:</label>
-                <input type="text" name="faculte" class="form-control" id="faculte" required>
+                <input type="text" name="faculte[]" class="form-control" id="faculte" required>
                 
             </div>
         </div>
@@ -216,7 +219,7 @@ $edu->Update();
     <div class="personel">
         <div class="col-md">
           <label for="validationCustom04" class="form-label">List:</label>
-          <select class="form-select" id="ecperience-list" name="ecperience-list" required>
+          <select class="form-select" id="ecperience-list" name="ecperience-list[]" required>
             <option value="Stage">Stage</option>
             <option value="Poste">Poste de travaile</option>
           </select> 
@@ -224,28 +227,28 @@ $edu->Update();
         <div class="row"> 
             <div class="col-md">
                 <label for="date-debut" class="form-label">Date Debut:</label>
-                <input type="date" id="datedebut" class="form-control" name="datedebut-experience" required>
+                <input type="date" id="datedebut" class="form-control" name="datedebut-experience[]" required>
                 
             </div>
             <div class="col-md">
                 <label for="validationCustom05" class="form-label">Date Fin:</label>
-                <input type="date" id="datefin" class="form-control" name="datefin-experience" required>
+                <input type="date" id="datefin" class="form-control" name="datefin-experience[]" required>
             </div>
           </div>  
          <div class="row">                     
             <div class="col-md">
                 <label for="validationCustom04" class="form-label">Social:</label>
-                <input type="text" name="social" class="form-control" id="social" required>
+                <input type="text" name="social[]" class="form-control" id="social" required>
             </div>
             <div class="col-md">
                 <label for="faculte" class="form-label">Titre:</label>
-                <input type="text" name="titre" class="form-control" id="titre" required>   
+                <input type="text" name="titre[]" class="form-control" id="titre" required>   
             </div>
         </div>
         <div class="col-md">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Description"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Description[]"></textarea>
           </div>
         </div>
         </div>     
@@ -270,11 +273,11 @@ $edu->Update();
     <div class="row">
       <div class="col-md">
         <label for="competence-nom" class="form-label">Nom:</label>
-        <input type="text" id="competence-nom" class="form-control" name="competence-nom" required>
+        <input type="text" id="competence-nom" class="form-control" name="competence-nom[]" required>
       </div>
       <div class="col-md">
         <label for="competence-domain" class="form-label">Domain:</label>
-        <input type="text" id="competence-domain" class="form-control" name="competence-domain" required>
+        <input type="text" id="competence-domain" class="form-control" name="competence-domain[]" required>
       </div>
     </div>
   </div>
@@ -299,11 +302,11 @@ $edu->Update();
     <div class="row">
       <div class="col-md">
         <label for="langage-nom" class="form-label">Langue:</label>
-        <input type="text" id="langage-nom" class="form-control" name="langage-nom" required>
+        <input type="text" id="langage-nom" class="form-control" name="langage-nom[]" required>
       </div>
       <div class="col-md">
         <label for="langauge-domain" class="form-label">Niveaux:</label>
-        <input type="text" id="langage-niveaux" class="form-control" name="langage-niveaux" required>
+        <input type="text" id="langage-niveaux" class="form-control" name="langage-niveaux[]" required>
       </div>
     </div>
   </div>

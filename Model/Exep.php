@@ -16,8 +16,16 @@ class Exp extends Connection {
     $stmt->bindParam(":descr", $desc);
     $stmt->execute();
     }
+    public function Expscore($id){
+        $query="SELECT TIMESTAMPDIFF(MONTH,dateDebut,dateFin)as durre ,nom FROM poste WHERE idc=:id";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        $exps= $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $exps;
 
-    function getExp($id){
+    }
+    public  function getExp($id){
         $query="SELECT  * FROM  poste WHERE  idc=:id";
         $stmt = $this->connect()->prepare($query);
         $stmt->bindParam(":id", $id);

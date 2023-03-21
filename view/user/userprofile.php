@@ -1,8 +1,30 @@
 <?php
-include_once dirname(__DIR__) . "/controller/ControllerCandidat.php";
+include_once dirname(__DIR__) . "../../controller/ControllerCandidat.php";
     $Cont = new ControllerCandidat();
     $Cont->setChoix();
+
+    
+    $candidats = $Cont->getCandid();
+
+    
+    
+
+
+// loop through the results and do something with each row
+
+
+    // extract the data from the first (and only) row
+   
+
+    // display the data on the page
+   // print_r($candidats);
+   
+
 ?>
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -374,13 +396,13 @@ img.rounded-circle {
 
             <ul>
                 <li class="nav-item ">
-                    <a href="./dashboard.php">
+                    <a href="../dashboard.php">
                         <i class="bx bxs-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="./userprofile.php">
+                    <a href="../userprofile.php">
                         <i class='bx bxs-user-detail'></i>
                         <span>Profile</span>
                     </a>
@@ -410,10 +432,10 @@ img.rounded-circle {
 <div class="card">
 <div class="card-body">
 <div class="d-flex flex-column align-items-center text-center">
-<img src="#" alt="achraf" class="rounded-circle" width="150" height="150">
+<img src="#" alt=<?php echo $candidats["nom"]?> class="rounded-circle" width="150" height="150">
 <div class="mt-3">
 <h4>
-   <?php echo $_SESSION["nom"]. " ". $_SESSION["prenom"]  ?>  
+   <?php echo $candidats["nom"]. " ". $candidats["prenom"]  ?>  
 </h4>
 <p class="text-secondary mb-1"> </p>
 <p class="text-muted font-size-sm">Kenitra, Morocco </p>
@@ -458,7 +480,7 @@ img.rounded-circle {
 <h6 class="mb-0">Full Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-  <?php echo $_SESSION["nom"]. " ". $_SESSION["prenom"]  ?>  
+  <?php echo $candidats["nom"]. " ". $candidats["prenom"]  ?>  
 </div>
 </div>
 <hr>
@@ -468,7 +490,7 @@ img.rounded-circle {
 </div>
 <div class="col-sm-9 text-secondary">
 <a href="#"> 
-    <?php echo $_SESSION["gmail"]  ?> 
+    <?php echo $candidats["gmail"]  ?>  
 </a>
 </div>
 </div>
@@ -487,7 +509,7 @@ img.rounded-circle {
 <h6 class="mb-0">Mobile</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<?php echo $_SESSION["Tele"] ?>
+<?php echo $candidats["Tele"] ?>
 </div>
 </div>
 <hr>
@@ -496,16 +518,31 @@ img.rounded-circle {
 <h6 class="mb-0">Address</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-Kenitra , Morocco 
+<?php echo $candidats["paye"]." , ".$candidats["ville"]  ?>
  </div>
 </div>
 <hr>
 <div class="row">
-<div class="col-sm-12">
-<a class="btn btn_outlin" href="#">Edit</a>
+<div class="col-sm-3">
+<h6 class="mb-0">Domaine</h6>
 </div>
+<div class="col-sm-9 text-secondary">
+<?php echo $candidats["domaine"] ?>
+ </div>
 </div>
+<hr>
+<div class="row">
+<div class="col-sm-3">
+<h6 class="mb-0">Score</h6>
 </div>
+<div class="col-sm-9 text-secondary">
+    
+<?php echo $candidats["Score"] ?>
+ </div>
+</div>
+<hr>
+</div>
+
 </div>
 </div>
 </div>
